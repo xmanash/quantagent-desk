@@ -1,0 +1,6 @@
+position_id,instrument,asset_class,notional,currency,direction,sensitivity,counterparty_id
+POS001,USD_10Y_SWAP,Rates,50000000,USD,Pay,0.012,CPTY_A
+POS002,EURUSD_FWD,FX,25000000,USD,Long,0.008,CPTY_B
+POS003,SPX_CALL_4500,Equity,10000000,USD,Long,0.35,CPTY_A
+POS004,CDX_IG_5Y,Credit,30000000,USD,Short,0.015,CPTY_C
+POS005,WTI_FUTURE,Commodity,15000000,USD,Long,0.02,CPTY_B

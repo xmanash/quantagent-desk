@@ -1,0 +1,42 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment and local credentials
+.env
+.env.local
+.env.*.local
+.deepeval/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data / local
+data/local/
+*.db
+chroma_data/
+langfuse_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

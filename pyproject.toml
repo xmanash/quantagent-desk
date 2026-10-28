@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantagent-desk"
+version = "0.1.0"
+description = "Unified Agentic Risk Dashboard + Generative Stress Testing"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "QuantAgent Open Source"}
+]
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic>=2.8.0",
+    "pydantic-settings>=2.4.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scipy>=1.13.0",
+    "streamlit>=1.38.0",
+    "plotly>=5.22.0",
+    "requests>=2.32.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+agents = [
+    "langchain>=0.3.0",
+    "langgraph>=0.2.0",
+    "chromadb>=0.5.0",
+    "ollama>=0.3.0",
+    "sentence-transformers>=3.0.0",
+]
+obs = [
+    "langfuse>=2.0.0",
+]
+evals = [
+    "ragas>=0.1.20",
+    "deepeval>=1.0.0",
+]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.6.0",
+    "mypy>=1.11.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

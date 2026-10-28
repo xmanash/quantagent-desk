@@ -1,0 +1,11 @@
+{
+  "portfolio_id": "DEMO_FIRM",
+  "name": "Demo Markets Firm",
+  "level": "Firm",
+  "as_of": "2026-10-21",
+  "desks": [
+    {"portfolio_id": "RATES_DESK", "name": "Rates Trading", "level": "Desk"},
+    {"portfolio_id": "FX_DESK", "name": "FX Trading", "level": "Desk"},
+    {"portfolio_id": "EQ_DESK", "name": "Equity Derivatives", "level": "Desk"}
+  ]
+}

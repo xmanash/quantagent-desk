@@ -1,0 +1,5 @@
+Show me firm-wide VaR and ES
+Run the 2008 GFC stress
+Generate an AI bubble unwind stress and show impact
+Generate a stagflation shock stress
+What is Expected Shortfall?

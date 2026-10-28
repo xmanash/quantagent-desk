@@ -1,0 +1,39 @@
+# Risk desk policy – enforced by guardrails layer
+version: "1.0"
+
+scope:
+  allowed_intents:
+    - risk
+    - stress
+    - limits
+    - rag
+    - general
+  blocked_topics:
+    - trade execution
+    - place order
+    - wire transfer
+    - password
+    - api key
+
+numeric_grounding:
+  require_calculation_id_for_money: true
+  require_citation_for_methodology: true
+  max_unverified_numbers: 0
+  tolerance_pct: 0.005
+  # Drop figures that do not match a calculation. The rest of the answer stays.
+  redact_unverified: true
+  strict_rejection: false
+
+limits:
+  refuse_if_breach_and_increase: true
+  warn_utilization_pct: 0.80
+  block_utilization_pct: 1.00
+
+stress:
+  max_equity_shock_abs: 0.60
+  max_rate_shock_bps: 500
+  require_grounded_sources: true
+
+response:
+  refuse_message: "I cannot answer that without a grounded calculation or citation. Please rephrase or request a supported risk/stress query."
+  off_scope_message: "That request is outside the risk desk scope (pricing analytics, risk, stress, limits, methodology only)."

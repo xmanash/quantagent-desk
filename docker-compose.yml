@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app/src
+    volumes:
+      - ./src:/app/src
+    command: uvicorn quantagent_desk.api.main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - chroma
+
+  # Optional self-hosted Langfuse (uncomment when ready)
+  # langfuse:
+  #   image: langfuse/langfuse:latest
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - DATABASE_URL=postgresql://...
+  #     - NEXTAUTH_SECRET=...
+  #     - ...
+
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+
+volumes:
+  chroma_data:

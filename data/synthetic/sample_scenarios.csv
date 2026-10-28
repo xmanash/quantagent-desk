@@ -1,0 +1,6 @@
+scenario_id,name,type,narrative
+SCN01,2008_GFC,Historical,2008 Global Financial Crisis equity and credit crash
+SCN02,COVID_2020,Historical,COVID-19 March 2020 liquidity sell-off
+SCN03,AI_BUBBLE,Generative,AI tech bubble unwind with Nasdaq crash and vol spike
+SCN04,STAGFLATION,Generative,Stagflation shock with rates up and inflation spike
+SCN05,OIL_GEOPOL,Generative,Geopolitical oil shock with Middle East risk-off

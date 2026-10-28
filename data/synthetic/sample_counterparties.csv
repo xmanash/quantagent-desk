@@ -1,0 +1,6 @@
+counterparty_id,name,rating,sector,country,pd,recovery_rate
+CPTY_A,Alpha Bank,A,Financials,US,0.002,0.40
+CPTY_B,Beta Capital,BBB,Asset Manager,UK,0.008,0.35
+CPTY_C,Gamma Corp,BB,Corporate,DE,0.015,0.30
+CPTY_D,Delta Fund,AA,Hedge Fund,US,0.001,0.45
+CPTY_E,Epsilon SA,B,Energy,FR,0.040,0.25
