@@ -68,6 +68,8 @@ PYTHONPATH=src streamlit run src/quantagent_desk/ui/app.py
 
 After starting with `run.bat` / `run.sh`, open **http://localhost:8501** in your browser.
 
+A shared test link for this desk is **https://panel-verde-copying-dictionary.trycloudflare.com**. It reaches the copy running on the host machine, so it works only while that machine and the tunnel are up.
+
 The terminal shows all four panels at once. Type in the amber command line on the desk panel.
 
 | Control | What it does |
